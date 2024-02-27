@@ -1,0 +1,341 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./images/bg5.jpg);
+    background-size: 10%;
+    background-repeat: repeat;
+    /* background: linear-gradient(270deg, red, black); */
+    
+}
+p, span, h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media (max-width:750px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .parent {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+        padding: 0 3px;
+    }
+    .imagecontainer{
+        width: 65%;
+
+    }
+    .right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bottom{
+        display: flex;
+        justify-content: center;
+    }
+    .top{
+        display: flex;
+        justify-content: center;
+    }
+    .mid{
+        display: flex;
+        justify-content: center;
+    }
+    p{
+        text-align: center;
+    }
+    .duedate{
+        animation: none;
+    }
+
+}
+/* @media (max-width:40%){
+    .container{
+        display: flex;
+        flex-direction: column wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .imagecontainer{
+        width: 50%;
+    }
+    .mid{
+        width: 30%;
+    }
+    .parent div{
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto; 
+    }
+    .times div{
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        }
+    .mid p{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    
+} 
+}*/
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.parent{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    
+}
+.imagecontainer{
+    background-color: rgb(167, 167, 167);
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px solid red;
+    
+    /* transition: 3s; */
+}
+.imagecontainer img{
+max-width: 100%;
+height: auto;
+display: block;
+margin: 0 auto;
+}
+/* .imagecontainer:hover{
+    padding: 50px;
+} */
+.item{
+border-radius: 20px;
+}
+.right{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+.top{
+    display: flex;
+    flex-flow: column ;
+    justify-content: center;
+}
+.mid{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.givetitle{
+    font-size: 35px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: white;
+    padding: 5px 0;
+}
+.givesubtitle{
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:200;
+    color: rgb(195, 195, 195);
+    padding: 5px 0;
+}
+.javadate{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: left;
+}
+.gt{
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:bold;
+    color: rgb(236, 236, 236);
+    padding-right: 5px;
+    transition: 0.3s;
+}
+
+.giveexplain{
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:200;
+    color: rgb(154, 154, 154);
+    padding: 3px 0;
+    
+}
+.bottom{
+    display: flex;
+    flex-flow: row ;
+    justify-content: left;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.timer{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: black;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    margin: auto;
+}
+.timer:hover{
+    background-color: red;
+    cursor: pointer;
+}
+.time{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.timetitle{
+    color: red;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 0;
+    text-align: center;
+  
+}
+.daytitle{
+    animation: timeAnimation 2s infinite alternate;
+}
+.hourtitle{
+    animation: timeAnimation 2s infinite alternate-reverse;
+}
+.mintitle{
+    animation: timeAnimation 3s infinite alternate;
+}
+.sectitle{
+    animation: timeAnimation 3s infinite alternate-reverse;
+}
+@keyframes timeAnimation {
+    0%{
+    color:rgb(225, 132, 132);
+    }
+    50%{
+        color: white;
+        
+    }
+    100%{
+        color: rgb(168, 89, 89);
+    }
+    
+}
+
+.times{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 4px 3px;
+    width: 75px;
+    
+}
+
+.talkb{
+    transition: 1s;
+}
+.duedate{
+    animation: textAnimation 4s infinite alternate;
+}
+@keyframes textAnimation {
+    0% {
+        color: white;
+        font-size: 15px;
+    }
+    50% {
+        color: rgb(227, 159, 0);
+        font-size: 20px;
+      
+    }
+    100%{
+        color: white;
+        font-size: 15px;
+    }
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+
+
+}
+.foot{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: dotted;
+}
+.myig{
+    text-decoration: none;
+    color: white;
+}
+.time{
+    position: relative;
+    animation: glitch-animation 3s infinite;
+
+} 
+@keyframes glitch-animation {
+    0% {
+      text-shadow: -5px 0 10px blue, 5px 0 10px red;
+    }
+    25% {
+      text-shadow: 5px 0 10px blue, -5px 0 10px red;
+    }
+    50% {
+      text-shadow: -5px 0 10px blue, 5px 0 10px red;
+    }
+    75% {
+      text-shadow: 5px 0 10px blue, -5px 0 10px red;
+    }
+    100% {
+      text-shadow: -5px 0 10px blue, 5px 0 10px red;
+    }
+}
+
